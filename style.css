@@ -1,0 +1,256 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.body {
+  color: #555;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  position: relative;
+  height: 100vh;
+  font-weight: 400;
+}
+
+.clearfix::after {
+  content: "";
+
+  display: table;
+  table-layout: fixed;
+  clear: both;
+}
+
+.right {
+  float: right;
+}
+
+.header {
+  height: 40vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+    url(./budget_img.jpg);
+
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.budget {
+  position: absolute;
+  height: 323px;
+  width: 490px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+
+  background-color: white;
+  border-radius: 10px;
+  left: 50%;
+}
+
+.budget_title {
+  left: 45vw;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-weight: 300;
+}
+
+.budget_value {
+  left: 45vh;
+  font-weight: 300;
+  font-size: 46px;
+  text-align: center;
+  margin-bottom: 25px;
+  letter-spacing: 2px;
+}
+
+.income_box {
+  background-color: orange;
+  margin-bottom: 20px;
+  padding: 8px;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 20px;
+}
+
+.income_text {
+  display: inline;
+  padding: 4px;
+}
+
+.income_value {
+  display: block;
+  right: 5%;
+  padding: 5px;
+  font-size: medium;
+  padding-right: 35px;
+}
+
+.expenses_box {
+  background-color: orangered;
+  margin-bottom: 10px;
+  padding: 8px;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 20px;
+}
+
+.expenses_text {
+  display: inline;
+  padding: 4px;
+}
+
+.expenses_value {
+  display: block;
+  right: 5%;
+  padding-right: 35px;
+  font-size: medium;
+}
+
+.bottom {
+  border: 3px solid rgb(0, 0, 0);
+  height: 100vh;
+}
+
+.add {
+  height: 8vh;
+  background-color: rgb(247, 239, 239);
+  box-sizing: border-box;
+}
+
+.income_btn {
+  height: 40px;
+  margin-top: 14px;
+  padding: 10px;
+  margin-left: 34%;
+  border-radius: 3px;
+}
+
+.income_btn:hover {
+  background-color: orange;
+}
+.expense_btn {
+  height: 40px;
+  margin-top: 14px;
+  padding: 10px;
+  margin-left: 1%;
+  border-radius: 3px;
+}
+.expense_btn:hover {
+  background-color: orangered;
+}
+
+.add_description {
+  height: 40px;
+  width: 335px;
+  cursor: pointer;
+}
+
+input[type="text"]:focus {
+  outline: 2px solid orange;
+}
+
+.add_value {
+  height: 40px;
+  width: 100px;
+}
+
+input[type="number"]:focus {
+  outline: 2px solid orange;
+}
+
+.container {
+  width: 1000px;
+  margin: 60px auto;
+}
+
+.income {
+  float: left;
+  width: 475px;
+  margin-right: 50px;
+}
+
+.expenses {
+  float: left;
+  width: 475px;
+}
+
+.inc_title {
+  color: orange;
+  margin-top: 30px;
+  margin-left: 50%;
+}
+
+.exp_title {
+  color: rgb(206, 10, 10);
+  text-align: center;
+  margin-top: 30px;
+  margin-left: 50%;
+}
+
+/* ////////////////////////////////////// */
+
+.item {
+  padding: 13px;
+  border-bottom: 1px solid #e7e7e7;
+  transition-duration: 5s;
+}
+
+.item:first-child {
+  border-top: 1px solid #e7e7e7;
+}
+.item:nth-child(even) {
+  background-color: #f7f7f7;
+}
+
+.item_description {
+  float: left;
+}
+
+.item_value {
+  float: left;
+  /* transition: transform 0.3s; */
+}
+
+.income .item_value,
+.income .item_delete_btn {
+  color: orange;
+}
+
+.expenses .item_vlaue,
+.expenses,
+.expenses .item_delete_btn {
+  color: orangered;
+}
+
+.item_delete {
+  float: left;
+}
+
+.item_delete_btn {
+  font-size: 22px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+  display: none;
+}
+
+.item_delete_btn:focus {
+  outline: none;
+}
+.item_delete_btn:active {
+  transform: translateY(2px);
+}
+
+.item:hover .item_delete_btn {
+  display: block;
+}
+.item:hover .item_value {
+  transform: translateX(-20px);
+}
